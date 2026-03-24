@@ -8,8 +8,8 @@ contract AuctionCollection {
 
     Auction [] public auctions;
 
-    function createAuction(uint  biddingTime, string memory secret, address payable beneficiary) public  {
-        Auction  newAuction = new Auction(biddingTime, secret, beneficiary);
+    function createAuction(uint  biddingTime, string memory secret, address payable beneficiary, uint max) public  {
+        Auction  newAuction = new Auction(biddingTime, secret, beneficiary, max);
         auctions.push(newAuction);
     }
 
