@@ -21,10 +21,98 @@
 						"internalType": "address payable",
 						"name": "beneficiaryAddress",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxbid",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "AuctionAlreadyEnded",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "highestBid",
+						"type": "uint256"
+					}
+				],
+				"name": "BidNotHighEnough",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "NotYetEnded",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "maxBidders",
+						"type": "uint256"
+					}
+				],
+				"name": "maxBiddersAlready",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_highestBid",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_highestBidder",
+						"type": "address"
+					}
+				],
+				"name": "AuctionHasEnded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "bid",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_difference",
+						"type": "uint256"
+					}
+				],
+				"name": "HighestBidIncreased",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "auctionEnd",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -61,12 +149,38 @@
 			},
 			{
 				"inputs": [],
+				"name": "bidderCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "difference",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getSecretMessage",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -96,6 +210,32 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "maxBidders",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -127,11 +267,11 @@
 	},
 	"sources": {
 		"contracts/Auction.sol": {
-			"keccak256": "0x5df648dc559da1bde3d75a2a35af9a2243d084b91259a421ca718ea2b121a7be",
+			"keccak256": "0x6521d1134cdcd1c432a9a5007e0f5280b84e4f6fdf179acdde222c6ce4eb2afb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a82953d883f161b8482f53e910e8e21a48ad810bcf9ae44e326abf817e4bc724",
-				"dweb:/ipfs/QmcBtFSe6H8ZUBvvthtpWn1G13SaGAyhFEChbadmFwfrDv"
+				"bzz-raw://d3b134515310976a9e83532430291ee5d5fea6be07c100246b5fc19954ea2eb4",
+				"dweb:/ipfs/QmTN3QnUTWV7bGHyjEbiAZrz55cBy9H8WTWXJmzACbzhz2"
 			]
 		}
 	},

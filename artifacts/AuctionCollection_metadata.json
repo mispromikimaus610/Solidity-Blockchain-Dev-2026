@@ -1,0 +1,122 @@
+{
+	"compiler": {
+		"version": "0.8.31+commit.fd3a2265"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "auctions",
+				"outputs": [
+					{
+						"internalType": "contract Auction",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "biddingTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "secret",
+						"type": "string"
+					},
+					{
+						"internalType": "address payable",
+						"name": "beneficiary",
+						"type": "address"
+					}
+				],
+				"name": "createAuction",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllAuctions",
+				"outputs": [
+					{
+						"internalType": "contract Auction[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/AuctionCollection.sol": "AuctionCollection"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Auction.sol": {
+			"keccak256": "0xc6705fe44163d5d3fb1f1cd98ed59dbe2ccf364a73b1a12eec3e6030f3d4042a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1ea3302d3a62cb84092a6eb21ae3861f69f5f7d18673854f1d0967e0da97f268",
+				"dweb:/ipfs/Qmc7YxNGPoDiQ9L6VSvjQohNr7qYtHusj1fddwowxPyEQ2"
+			]
+		},
+		"contracts/AuctionCollection.sol": {
+			"keccak256": "0x830db5bf23014f453723ad74880004a9add01aa952fb1221125ed3756c463e94",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1de445c7868e4fde77c4c4f2e7c55cf4f8f85fed985b657cd67a4741732ef2e7",
+				"dweb:/ipfs/QmNrzLUPpKwK49emN67cvCMZfF5JsVxfKQ1n537ns1iKEE"
+			]
+		}
+	},
+	"version": 1
+}
